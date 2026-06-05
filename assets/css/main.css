@@ -2574,4 +2574,3 @@ article.seccion-archivo-historico {
 .seccion-archivo-historico .boton-historico span {
     font-size: calc(0.9rem + 0.2vw) !important; /* Escala de texto protegida contra zooms del sistema */
 }
-
