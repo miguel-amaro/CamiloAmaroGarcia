@@ -2525,17 +2525,15 @@ article.seccion-archivo-historico div {
 /* 1. CONFIGURACIÓN DEL PERGAMINO CON ESCALA INTELIGENTE */
 article.seccion-archivo-historico {
     position: relative !important;
-    background-repeat: no-repeat !important;
+    padding: 70px 15px 40px 15px !important;
+    min-height: 450px !important;
+    
+    /* EL CAMBIO CLAVE: Cambiamos 100% 100% por 'cover' */
+    background-image: url('./../../fondos/pergamino2.jpg') !important;
+    background-size: cover !important; 
     background-position: center center !important;
-    
-    /* Usamos 'contain' para obligar a los móviles a mostrar los dobleces enteros */
-    background-size: contain !important; 
-    
-    /* El padding se adapta: 80px en PC y baja dinámicamente en pantallas pequeñas */
-    padding: calc(40px + 3vw) 20px !important; 
-    
-    /* Altura mínima segura proporcional para que quepan tus 3 botones */
-    min-height: 420px !important; 
+    background-repeat: no-repeat !important;
+}
 }
 
 /* 2. TEXTOS INTEGRADOS CON FUENTE ADAPTABLE */
