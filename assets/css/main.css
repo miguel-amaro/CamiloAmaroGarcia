@@ -2520,29 +2520,27 @@ article.seccion-archivo-historico div {
 /* AJUSTE EXCLUSIVO PARA EL PERGAMINO EN EL MÓVIL */
 @media (max-width: 768px) {
     article.seccion-archivo-historico {
-        padding: 60px 15px 40px 15px !important; /* Le damos 60px arriba para proteger el enrollado */
-        min-height: 430px !important; /* Ajustamos la altura mínima de seguridad */
-        background-size: 100% 100% !important;
-        background-position: center center !important;
+        padding: 50px 15px 40px 15px !important;
+        
+        /* LA CORRECCIÓN DE HARDWARE PARA MÓVILES REALES */
+        background-size: contain !important; /* Fuerza a que la imagen quepa entera sin cortarse */
+        background-repeat: no-repeat !important;
+        background-position: center top !important; /* Clava el enrollado arriba */
+        
+        /* Ajustamos una altura proporcional para pantallas táctiles */
+        min-height: 380px !important; 
     }
     
-    /* BAJAMOS UN PELÍN LAS LETRAS DE LA SECCIÓN EN EL MÓVIL POR SEGURIDAD */
-    .seccion-archivo-historico h3 {
-        font-size: 18px !important; 
-    }
-    .seccion-archivo-historico p {
-        font-size: 14px !important; 
-    }
     .seccion-archivo-historico .boton-historico span {
-        font-size: 0.9rem !important; /* Le damos aire al texto del botón largo para que no salte */
+        font-size: 0.9rem !important;
     }
     
     .seccion-archivo-historico .contenedor-botones-archivo {
-        gap: 10px !important; /* Estrechamos el espacio entre los 3 botones */
+        gap: 10px !important;
         margin-bottom: 20px !important;
     }
     
     .seccion-archivo-historico .contenedor-botones-archivo a.boton-historico {
-        padding: 12px 10px !important; /* Reducimos el relleno interno del botón en el móvil */
+        padding: 12px 10px !important;
     }
 }
