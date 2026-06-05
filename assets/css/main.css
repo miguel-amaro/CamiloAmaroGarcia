@@ -2433,7 +2433,7 @@ article.seccion-archivo-historico {
     /* TU RUTA CORRECTA: Capa con opacidad y la imagen en la carpeta fondos */
     background-image: 
         linear-gradient(rgba(248, 248, 248, 0.5), rgba(248, 248, 248, 0.5)), 
-        url('./../../fondos/pergamino.jpg?v=2') !important;
+        url('./../../fondos/pergamino2.jpg') !important;
 }
 
 /* Ajuste sutil para que el pergamino se adapte bien en el móvil */
