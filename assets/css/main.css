@@ -2516,6 +2516,7 @@ article.seccion-archivo-historico div {
 .posts article p {
     font-size: 20px !important; /* Ajusta los textos a tu gusto (estaba en 20px) */
 }
+
 /* AJUSTE EXCLUSIVO PARA EL PERGAMINO EN EL MÓVIL */
 @media (max-width: 768px) {
     article.seccion-archivo-historico {
