@@ -1,0 +1,212 @@
+	/* ========================================================
+   CONTENEDOR GENERAL
+   ======================================================== */
+.seccion-album {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: sans-serif;
+}
+
+.seccion-album h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.seccion-album .introduccion {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* ========================================================
+   ESTRUCTURA DE FILAS 3-2-3-2 (FLEXBOX)
+   ======================================================== */
+.cuadrilla-pinturas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px; /* El espacio de 25px que ya tenías */
+  margin: 20px 0;
+  align-items: start;
+}
+
+/* Base común para todas las tarjetas (Mantiene tus sombras y relieves) */
+.tarjeta-pintura {
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 
+              0 4px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta-pintura:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.18), 
+              0 6px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* FILAS DE 3: Forzamos a que ocupen un tercio del ancho disponible */
+.tarjeta-vertical {
+  flex: 1 1 calc(33.333% - 25px);
+  min-width: 280px; /* Tamaño mínimo para que no se rompa en móviles */
+}
+
+/* FILAS DE 2: Forzamos a que ocupen la mitad del ancho (se ven más grandes) */
+.tarjeta-horizontal {
+  flex: 1 1 calc(50% - 25px);
+  min-width: 350px;
+}
+
+/* ========================================================
+   MARCOS DE FOTOS Y LEYENDAS (Tus estilos originales)
+   ======================================================== */
+.marco-foto {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff; /* Fondo limpio beige */
+  display: block;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.marco-foto img {
+  width: auto;          
+  max-width: 100%;      
+  max-height: 350px;    /* El freno para que no se desmadren */
+  display: block;
+  margin: 0 auto;       
+  object-fit: contain;  
+}
+
+.leyenda {
+  padding: 15px 5px; /* Un poco más de margen vertical para equilibrar */
+  text-align: center;
+  background-color: #fdfbf7;
+  border-top: 0px solid #f1f5f9;
+  margin-top: auto; /* Empuja la leyenda abajo si las imágenes varían en altura */
+}
+
+.leyenda h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.2rem;
+  color: #1e293b;
+  font-weight: bold;
+  letter-spacing: -0.5px;
+}
+
+.leyenda p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+.leyenda .tecnica {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #a16207;
+  font-weight: 600;
+}
+
+/* ========================================================
+   BOTONES DE PAGINACIÓN (CENTRADOS)
+   ======================================================== */
+.top-pager, .bottom-pager {
+  display: flex;
+  justify-content: center; /* Centrado absoluto horizontal */
+  align-items: center;
+  gap: 15px;
+  margin: 30px 0;
+  width: 100%;
+}
+
+/* Botón de la Página Actual (Desactivado, Gris) */
+.pager .current {
+  display: inline-block;
+  background: #777777;
+  color: #ffffff !important;
+  padding: 0.6em 1.8em;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: default;
+  border: 1px solid #777777;
+}
+
+/* Botón de la Página 2 (Activo, con el color coral de la plantilla) */
+.pager .page-link {
+  display: inline-block;
+  background: #f56a6a;
+  color: #ffffff !important;
+  padding: 0.6em 1.8em;
+  border-radius: 4px;
+  font-weight: bold;
+  text-decoration: none;
+  border: 1px solid #f56a6a;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.pager .page-link:hover {
+  background: #f67b7b;
+  border-color: #f67b7b;
+}
+
+/* ========================================================
+   COMPATIBILIDAD CON VISORES Y MÁRGENES (Tus estilos)
+   ======================================================== */
+.image {
+  position: relative;
+  display: inline-block;
+}
+
+body.lg-on .card, 
+body.lg-on figure,
+.lg-outer, 
+.lg-backdrop {
+  pointer-events: auto !important;
+  z-index: 999999 !important;
+}
+
+h1 {
+  margin-top: -20px;    
+  margin-bottom: -10px;   
+  line-height: 1.2;     
+}
+
+h2 {
+  margin-top: -30px;    
+  margin-bottom: -10px;  
+  line-height: 1.2;
+}
+
+.introduccion {
+  margin-top: -5px;     
+  margin-bottom: 2px;
+}
+
+/* ==========================================================================
+   CÓDIGO ORIGINAL REPARADO: PLANO Y CON LA ALINEACIÓN DE SIEMPRE
+   ========================================================================== */
+
+.marco-blanco-cuadro {
+    background-color: #ffffff !important; /* Tu paspartú blanco de siempre */
+    padding: 15px !important;             /* Tus 15px de margen */
+    display: block !important;
+    border: 1px solid #dcdcdc !important; /* La línea fina gris */
+}
+
+.marco-blanco-cuadro img {
+    background-color: transparent !important; /* AQUÍ ESTÁ EL TRUCO: evita el blanco fantasma del cuadro 3 */
+    padding: 0px !important;
+    margin: 0px !important;
+    display: block !important;
+    width: 100% !important;
+    height: auto !important;
+    box-shadow: none !important;              /* Completamente plano */
+}
